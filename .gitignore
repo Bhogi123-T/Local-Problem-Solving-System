@@ -1,0 +1,27 @@
+# Environments
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+.python-version
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local Databases (ignore dynamic JSON databases being written to disk by app.py)
+users.json
+# If you want to commit your initial db data, you can remove these two lines:
+complaints.json
+officers.json
+
+# OS Files
+.DS_Store
+Thumbs.db

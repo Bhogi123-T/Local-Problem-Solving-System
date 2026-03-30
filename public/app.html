@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicAlert | Smart Problem Reporter</title>
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar glass-panel">
+            <div class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-city"></i></div>
+                <h1>CivicAlert</h1>
+            </div>
+            
+            <ul class="nav-links">
+                <li class="active" data-target="dashboard-view"><i class="fa-solid fa-chart-pie"></i> Dashboard</li>
+                <li data-target="report-view"><i class="fa-solid fa-plus-circle"></i> Report Issue</li>
+                <li data-target="map-view">
+                    <i class="fa-solid fa-map-location-dot"></i> Live Map
+                    <span id="map-live-badge" class="live-badge"><span class="live-dot"></span>LIVE</span>
+                </li>
+                <li data-target="leaderboard-view"><i class="fa-solid fa-medal"></i> Leaderboard</li>
+            </ul>
+
+            <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--panel-border);">
+                <div style="display:flex; align-items:center; gap: 10px; margin-bottom: 15px;">
+                    <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg, var(--primary), var(--accent)); display:grid; place-items:center; font-weight:700; color:#fff;" id="nav-initials">U</div>
+                    <div>
+                        <div style="font-size: 0.9rem; font-weight: 600;" id="nav-name">User Name</div>
+                        <div style="font-size: 0.75rem; color: var(--text-muted);"><i class="fa-solid fa-star" style="color:var(--warning)"></i> <span id="nav-points">0</span> Points</div>
+                    </div>
+                </div>
+                <button onclick="handleLogout()" class="btn-icon-outline" style="width: 100%; justify-content: center; color: var(--text-muted); border-color: transparent;"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- Dashboard View -->
+            <section id="dashboard-view" class="view-section active">
+                <header class="section-header">
+                    <h2>Live Dashboard</h2>
+                    <p>Real-time civic issues tracked and grouped by AI</p>
+                </header>
+                
+                <div class="stats-grid">
+                    <div class="stat-card glass-panel urgent-stat">
+                        <div class="stat-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <div class="stat-info">
+                            <h3>Urgent</h3>
+                            <h2 id="stat-urgent">0</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card glass-panel total-stat">
+                        <div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="stat-info">
+                            <h3>Total Reports</h3>
+                            <h2 id="stat-total">0</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card glass-panel resolved-stat">
+                        <div class="stat-icon"><i class="fa-solid fa-check-circle"></i></div>
+                        <div class="stat-info">
+                            <h3>Resolved</h3>
+                            <h2 id="stat-resolved">0</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-issues">
+                    <h3>Recent AI-Classified Reports</h3>
+                    <div class="issues-list" id="complaints-list">
+                        <!-- Complaints will be loaded here dynamically -->
+                        <div class="loading-spinner"><i class="fa-solid fa-circle-notch fa-spin"></i> Loading...</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Report View -->
+            <section id="report-view" class="view-section">
+                <header class="section-header">
+                    <h2>Report an Issue</h2>
+                    <p>Help us improve the city by reporting local problems</p>
+                </header>
+
+                <div class="form-container glass-panel">
+                    <form id="report-form" class="report-form">
+                        <div class="form-group">
+                            <label for="name"><i class="fa-solid fa-user"></i> Your Name (Optional)</label>
+                            <input type="text" id="name" placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location"><i class="fa-solid fa-location-dot"></i> Location/Landmark *</label>
+                            <div class="location-input-group">
+                                <input type="text" id="location" placeholder="E.g., 123 Main Street near park" required>
+                                <button type="button" id="btn-get-location" class="btn-icon" title="Use current location">
+                                    <i class="fa-solid fa-crosshairs"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description"><i class="fa-solid fa-align-left"></i> Description *</label>
+                            <textarea id="description" rows="4" placeholder="Describe the issue (e.g., Pothole spanning entire lane)" required></textarea>
+                        </div>
+                        
+                        <div class="form-group photo-upload">
+                            <label class="photo-upload-label" for="photo">
+                                <i class="fa-solid fa-camera fa-2x"></i>
+                                <span>Upload Photo (Optional)</span>
+                            </label>
+                            <input type="file" id="photo" accept="image/*" class="hidden-input">
+                        </div>
+
+                        <input type="hidden" id="lat">
+                        <input type="hidden" id="lng">
+
+                        <button type="submit" class="btn-primary" id="submit-btn">
+                            <span>Submit Report</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    
+                    <div id="ai-analyzing" class="ai-overlay hidden">
+                        <div class="ai-loader">
+                            <div class="pulse"></div>
+                            <h3>AI is analyzing your report...</h3>
+                            <p>Classifying issue and determining priority</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Map View -->
+            <section id="map-view" class="view-section">
+                <header class="section-header">
+                    <div>
+                        <h2><i class="fa-solid fa-map-location-dot"></i> Live Complaint Map</h2>
+                        <p>Realtime geospatial view of all reported civic issues &mdash; auto-refreshes every 15s</p>
+                    </div>
+                    <div class="map-header-actions">
+                        <button id="btn-map-locate" class="btn-icon-outline" title="Center on my location">
+                            <i class="fa-solid fa-crosshairs"></i> My Location
+                        </button>
+                        <span id="map-last-updated" class="map-updated-tag">Updated just now</span>
+                    </div>
+                </header>
+
+                <!-- Filter Bar -->
+                <div class="map-filter-bar glass-panel">
+                    <span class="filter-label"><i class="fa-solid fa-filter"></i> Filter:</span>
+                    <button class="map-filter-btn active" data-filter="all">All</button>
+                    <button class="map-filter-btn urgent-filter" data-filter="urgent">🔴 Urgent</button>
+                    <button class="map-filter-btn medium-filter" data-filter="medium">🟡 Medium</button>
+                    <button class="map-filter-btn low-filter" data-filter="low">🟢 Low</button>
+                    <button class="map-filter-btn resolved-filter" data-filter="resolved">✅ Resolved</button>
+                    <div class="filter-sep"></div>
+                    <button class="map-filter-btn type-filter" data-type="Road">🛣️ Road</button>
+                    <button class="map-filter-btn type-filter" data-type="Water">💧 Water</button>
+                    <button class="map-filter-btn type-filter" data-type="Garbage">🗑️ Garbage</button>
+                    <button class="map-filter-btn type-filter" data-type="Electricity">⚡ Electricity</button>
+                </div>
+
+                <div class="map-wrapper">
+                    <div class="map-container glass-panel">
+                        <div id="map"></div>
+                    </div>
+
+                    <!-- Map Legend -->
+                    <div class="map-legend glass-panel">
+                        <div class="legend-title"><i class="fa-solid fa-circle-info"></i> Legend</div>
+                        <div class="legend-item"><span class="legend-dot" style="background:#f85149; box-shadow:0 0 8px #f85149;"></span> Urgent</div>
+                        <div class="legend-item"><span class="legend-dot" style="background:#d29922; box-shadow:0 0 8px #d29922;"></span> Medium</div>
+                        <div class="legend-item"><span class="legend-dot" style="background:#58a6ff; box-shadow:0 0 8px #58a6ff;"></span> Low</div>
+                        <div class="legend-item"><span class="legend-dot" style="background:#2ea043; box-shadow:0 0 8px #2ea043;"></span> Resolved</div>
+                        <div class="legend-sep"></div>
+                        <div class="legend-item"><span class="pulse-mini"></span> Active</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Leaderboard View -->
+            <section id="leaderboard-view" class="view-section">
+                <header class="section-header">
+                    <h2>🏆 Civic Hero Leaderboard</h2>
+                    <p>Top reporters and officers making our city better</p>
+                </header>
+                <div class="stats-grid">
+                    <div class="glass-panel" style="padding: 20px;">
+                        <h3 style="color: var(--primary); margin-bottom: 15px;"><i class="fa-solid fa-trophy"></i> Top Citizens</h3>
+                        <ol id="citizen-leaderboard" style="padding-left: 20px; color: var(--text-main); line-height: 1.8;">
+                            <li>🥇 John Doe - <span style="color:var(--success)">250 pts</span></li>
+                            <li>🥈 Sarah Smith - <span style="color:var(--success)">180 pts</span></li>
+                            <li>🥉 Raj Kumar - <span style="color:var(--success)">150 pts</span></li>
+                        </ol>
+                    </div>
+                    
+                    <div class="glass-panel" style="padding: 20px;">
+                        <h3 style="color: var(--warning); margin-bottom: 15px;"><i class="fa-solid fa-shield-halved"></i> Top Officers (SLA compliance)</h3>
+                        <ol id="officer-leaderboard" style="padding-left: 20px; color: var(--text-main); line-height: 1.8;">
+                            <li>🥇 Officer Priya - <span style="color:var(--warning)">98% on-time</span></li>
+                            <li>🥈 Officer Kumar - <span style="color:var(--warning)">91% on-time</span></li>
+                            <li>🥉 Officer Rajan - <span style="color:var(--warning)">85% on-time</span></li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- AI Insights Modal -->
+    <div id="insight-modal" class="modal-overlay hidden">
+        <div class="modal glass-panel">
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-wand-magic-sparkles"></i> AI Analysis Result</h2>
+            </div>
+            <div class="modal-content" id="insight-content">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

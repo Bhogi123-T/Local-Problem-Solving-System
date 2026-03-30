@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CivicAlert | Sign In</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --bg: #0d1117; --s1: #161b22; --s2: #21262d; --border: #30363d;
+      --acc: #3fb950; --blue: #58a6ff; --red: #f85149; --warn: #e3b341;
+      --text: #e6edf3; --muted: #8b949e; --font: 'Outfit', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text); font-family: var(--font);
+      min-height: 100vh; display: grid; place-items: center;
+      background-image:
+        radial-gradient(ellipse 60% 60% at 20% 20%, rgba(63,185,80,0.09) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 60% at 80% 80%, rgba(88,166,255,0.08) 0%, transparent 60%);
+    }
+
+    .auth-wrapper {
+      width: 100%; max-width: 420px; padding: 24px;
+      display: flex; flex-direction: column; align-items: center; gap: 24px;
+    }
+
+    .auth-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 1.4rem; font-weight: 800; color: var(--acc);
+      text-decoration: none;
+    }
+    .auth-logo .icon { font-size: 24px; }
+
+    .auth-card {
+      width: 100%; background: var(--s1);
+      border: 1px solid var(--border); border-radius: 16px;
+      padding: 32px;
+    }
+
+    .tabs {
+      display: flex; gap: 0; margin-bottom: 28px;
+      background: var(--s2); border-radius: 8px; padding: 4px;
+    }
+    .tab-btn {
+      flex: 1; padding: 9px; border: none; background: transparent;
+      color: var(--muted); font-family: var(--font); font-size: 14px;
+      font-weight: 700; cursor: pointer; border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .tab-btn.active { background: var(--s1); color: var(--text); box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .form-group { margin-bottom: 18px; }
+    .form-label {
+      display: block; font-size: 11px; font-weight: 700;
+      color: var(--muted); text-transform: uppercase; letter-spacing: 1px;
+      margin-bottom: 7px;
+    }
+    .form-input {
+      width: 100%; padding: 11px 14px;
+      background: var(--s2); border: 1px solid var(--border);
+      border-radius: 8px; color: var(--text); font-family: var(--font);
+      font-size: 14px; outline: none; transition: border-color 0.2s;
+    }
+    .form-input:focus { border-color: var(--acc); }
+    .input-icon-wrap { position: relative; }
+    .input-icon-wrap i {
+      position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
+      color: var(--muted); font-size: 13px;
+    }
+    .input-icon-wrap .form-input { padding-left: 36px; }
+
+    .submit-btn {
+      width: 100%; padding: 12px; border-radius: 8px; border: none;
+      background: var(--acc); color: #000; font-family: var(--font);
+      font-size: 15px; font-weight: 800; cursor: pointer;
+      transition: all 0.2s; margin-top: 4px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .submit-btn:hover { background: #45c955; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(63,185,80,0.4); }
+    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    .error-msg {
+      background: rgba(248,81,73,0.1); border: 1px solid rgba(248,81,73,0.3);
+      color: var(--red); padding: 10px 14px; border-radius: 8px;
+      font-size: 13px; margin-bottom: 16px; display: none; align-items: center; gap: 8px;
+    }
+    .error-msg.show { display: flex; }
+    .success-msg {
+      background: rgba(63,185,80,0.1); border: 1px solid rgba(63,185,80,0.3);
+      color: var(--acc); padding: 10px 14px; border-radius: 8px;
+      font-size: 13px; margin-bottom: 16px; display: none; align-items: center; gap: 8px;
+    }
+    .success-msg.show { display: flex; }
+
+    .divider { height: 1px; background: var(--border); margin: 20px 0; position: relative; }
+    .divider span {
+      position: absolute; top: -9px; left: 50%; transform: translateX(-50%);
+      background: var(--s1); padding: 0 10px; font-size: 11px; color: var(--muted);
+    }
+
+    .back-link {
+      font-size: 12px; color: var(--muted); text-align: center;
+      text-decoration: none;
+    }
+    .back-link:hover { color: var(--blue); }
+
+    .strength-bar { height: 3px; border-radius: 2px; background: var(--s2); margin-top: 6px; overflow: hidden; }
+    .strength-fill { height: 100%; border-radius: 2px; transition: all 0.3s; width: 0; }
+  </style>
+</head>
+<body>
+
+<div class="auth-wrapper">
+  <!-- Logo -->
+  <a href="/" class="auth-logo">
+    <span class="icon">🏙️</span> CivicAlert
+  </a>
+
+  <!-- Card -->
+  <div class="auth-card">
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" id="tab-login" onclick="switchTab('login')">Sign In</button>
+      <button class="tab-btn" id="tab-register" onclick="switchTab('register')">Create Account</button>
+    </div>
+
+    <!-- LOGIN -->
+    <div class="tab-panel active" id="panel-login">
+      <div class="error-msg" id="login-error"><i class="fa-solid fa-circle-exclamation"></i> <span id="login-error-text"></span></div>
+      <form id="login-form" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <div class="input-icon-wrap">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" class="form-input" id="login-email" placeholder="you@example.com" required autocomplete="email"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <div class="input-icon-wrap">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" class="form-input" id="login-pw" placeholder="••••••••" required autocomplete="current-password"/>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn" id="login-btn">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In
+        </button>
+      </form>
+
+      <div class="divider"><span>New here?</span></div>
+      <p style="text-align:center; font-size:13px; color:var(--muted);">
+        <a href="#" onclick="switchTab('register')" style="color:var(--acc); font-weight:700;">Create a free account</a> and start reporting civic issues.
+      </p>
+    </div>
+
+    <!-- REGISTER -->
+    <div class="tab-panel" id="panel-register">
+      <div class="error-msg" id="reg-error"><i class="fa-solid fa-circle-exclamation"></i> <span id="reg-error-text"></span></div>
+      <div class="success-msg" id="reg-success"><i class="fa-solid fa-circle-check"></i> Account created! Signing you in…</div>
+      <form id="register-form" onsubmit="handleRegister(event)">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <div class="input-icon-wrap">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" class="form-input" id="reg-name" placeholder="John Doe" required autocomplete="name"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <div class="input-icon-wrap">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" class="form-input" id="reg-email" placeholder="you@example.com" required autocomplete="email"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <div class="input-icon-wrap">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" class="form-input" id="reg-pw" placeholder="Min. 6 characters" required autocomplete="new-password" oninput="updateStrength(this.value)"/>
+          </div>
+          <div class="strength-bar"><div class="strength-fill" id="strength-fill"></div></div>
+        </div>
+        <button type="submit" class="submit-btn" id="reg-btn">
+          <i class="fa-solid fa-user-plus"></i> Create Account
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <a href="/" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+</div>
+
+<script>
+  // Auto-switch to register if URL hash says so
+  if (window.location.hash === '#register') switchTab('register');
+
+  function switchTab(tab) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('tab-' + tab).classList.add('active');
+    document.getElementById('panel-' + tab).classList.add('active');
+  }
+
+  function updateStrength(pw) {
+    const fill = document.getElementById('strength-fill');
+    let score = 0;
+    if (pw.length >= 6) score++;
+    if (pw.length >= 10) score++;
+    if (/[A-Z]/.test(pw)) score++;
+    if (/[0-9]/.test(pw)) score++;
+    if (/[^A-Za-z0-9]/.test(pw)) score++;
+    const colors = ['#f85149','#d29922','#d29922','#3fb950','#3fb950'];
+    fill.style.width = (score * 20) + '%';
+    fill.style.background = colors[score] || '#f85149';
+  }
+
+  async function handleLogin(e) {
+    e.preventDefault();
+    const btn = document.getElementById('login-btn');
+    const errEl = document.getElementById('login-error');
+    const errTxt = document.getElementById('login-error-text');
+    btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Signing in…';
+    errEl.classList.remove('show');
+
+    try {
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        credentials: 'include',
+        body: JSON.stringify({
+          email: document.getElementById('login-email').value,
+          password: document.getElementById('login-pw').value
+        })
+      });
+      const data = await res.json();
+      if (data.success) {
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> Welcome back, ' + data.user.name + '!';
+        setTimeout(() => { window.location.href = '/app'; }, 600);
+      } else {
+        errTxt.textContent = data.error || 'Login failed';
+        errEl.classList.add('show');
+        btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-right-to-bracket"></i> Sign In';
+      }
+    } catch(err) {
+      errTxt.textContent = 'Could not connect to server';
+      errEl.classList.add('show');
+      btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-right-to-bracket"></i> Sign In';
+    }
+  }
+
+  async function handleRegister(e) {
+    e.preventDefault();
+    const btn = document.getElementById('reg-btn');
+    const errEl = document.getElementById('reg-error');
+    const errTxt = document.getElementById('reg-error-text');
+    const succEl = document.getElementById('reg-success');
+    btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Creating account…';
+    errEl.classList.remove('show'); succEl.classList.remove('show');
+
+    try {
+      const res = await fetch('/api/register', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        credentials: 'include',
+        body: JSON.stringify({
+          name: document.getElementById('reg-name').value,
+          email: document.getElementById('reg-email').value,
+          password: document.getElementById('reg-pw').value
+        })
+      });
+      const data = await res.json();
+      if (data.success) {
+        succEl.classList.add('show');
+        setTimeout(() => { window.location.href = '/app'; }, 1200);
+      } else {
+        errTxt.textContent = data.error || 'Registration failed';
+        errEl.classList.add('show');
+        btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-user-plus"></i> Create Account';
+      }
+    } catch(err) {
+      errTxt.textContent = 'Could not connect to server';
+      errEl.classList.add('show');
+      btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-user-plus"></i> Create Account';
+    }
+  }
+</script>
+</body>
+</html>
