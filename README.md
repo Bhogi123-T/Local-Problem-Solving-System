@@ -1,62 +1,80 @@
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!--                     CIVICALERT — README                       -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
 <div align="center">
 
-<br/>
-<br/>
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0D1B2A,30:1B4332,60:065F46,100:0D9488&height=280&section=header&text=CivicAlert&fontSize=90&fontColor=FFFFFF&fontAlignY=45&desc=🏙️%20Local%20Problem%20Solving%20System&descSize=22&descColor=5EEAD4&descAlignY=68&animation=twinkling&stroke=0D9488&strokeWidth=2" width="100%"/>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=CivicAlert&fontSize=72&fontColor=ffffff&fontAlignY=38&desc=Local%20Problem%20Solving%20System&descAlignY=60&descSize=20&descColor=94a3b8&animation=fadeIn"/>
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=CivicAlert&fontSize=72&fontColor=ffffff&fontAlignY=38&desc=Local%20Problem%20Solving%20System&descAlignY=60&descSize=20&descColor=94a3b8&animation=fadeIn" alt="CivicAlert Header"/>
-</picture>
+</div>
 
+<!-- ── BADGES ROW 1 ─────────────────────────────────────────────── -->
+<div align="center">
 <br/>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/version-1.0.0-0ea5e9?style=for-the-badge&labelColor=0f172a" alt="Version"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge&labelColor=0f172a" alt="License"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/status-Active-f59e0b?style=for-the-badge&labelColor=0f172a" alt="Status"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/PRs-Welcome-a855f7?style=for-the-badge&labelColor=0f172a" alt="PRs Welcome"/>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=1e293b"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/Flask-2.x-000000?style=flat-square&logo=flask&logoColor=white&labelColor=1e293b"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/Claude_AI-Anthropic-D97757?style=flat-square&logo=anthropic&logoColor=white&labelColor=1e293b"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/PWA-Enabled-5A0FC8?style=flat-square&logo=pwa&logoColor=white&labelColor=1e293b"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/Leaflet.js-Maps-199900?style=flat-square&logo=leaflet&logoColor=white&labelColor=1e293b"/>
-</p>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&duration=3000&pause=1000&color=0D9488&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=60&lines=AI-Powered+Civic+Issue+Management+Platform;Smarter+Cities+%7C+Faster+Resolutions+%7C+Happier+Citizens)](https://github.com/Bhogi123-T/Local-Problem-Solving-System)
 
 <br/>
 
-<h3>
-  🏙️ &nbsp; AI-powered civic issue reporting &nbsp;·&nbsp; smart triage &nbsp;·&nbsp; real-time resolution tracking
-</h3>
-
-<p align="center">
-  <i>Empowering citizens. Streamlining governance. Building smarter cities — one complaint at a time.</i>
-</p>
+<img src="https://img.shields.io/badge/─────────────────────────────────────────────────────-transparent?style=flat-square" />
 
 <br/>
 
-<p align="center">
-  <a href="#-overview"><kbd>Overview</kbd></a> &nbsp;·&nbsp;
-  <a href="#-features"><kbd>Features</kbd></a> &nbsp;·&nbsp;
-  <a href="#%EF%B8%8F-architecture"><kbd>Architecture</kbd></a> &nbsp;·&nbsp;
-  <a href="#-getting-started"><kbd>Getting Started</kbd></a> &nbsp;·&nbsp;
-  <a href="#-project-structure"><kbd>Structure</kbd></a> &nbsp;·&nbsp;
-  <a href="#-contributing"><kbd>Contributing</kbd></a>
-</p>
+<a href="#"><img src="https://img.shields.io/badge/VERSION-1.0.0-0D9488?style=for-the-badge&logo=semver&logoColor=white&labelColor=0D1B2A"/></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-10B981?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=0D1B2A"/></a>
+<a href="#"><img src="https://img.shields.io/badge/STATUS-ACTIVE-F59E0B?style=for-the-badge&logo=statuspage&logoColor=white&labelColor=0D1B2A"/></a>
+<a href="#-contributing"><img src="https://img.shields.io/badge/PRs-WELCOME-A855F7?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1B2A"/></a>
 
-<br/>
+<br/><br/>
+
+<a href="#"><img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=1e293b"/></a>
+<a href="#"><img src="https://img.shields.io/badge/Flask-Backend-000000?style=flat-square&logo=flask&logoColor=white&labelColor=1e293b"/></a>
+<a href="#"><img src="https://img.shields.io/badge/Claude_AI-Anthropic-D97757?style=flat-square&logo=anthropic&logoColor=white&labelColor=1e293b"/></a>
+<a href="#"><img src="https://img.shields.io/badge/Leaflet.js-Maps-199900?style=flat-square&logo=leaflet&logoColor=white&labelColor=1e293b"/></a>
+<a href="#"><img src="https://img.shields.io/badge/PWA-Offline_Ready-5A0FC8?style=flat-square&logo=pwa&logoColor=white&labelColor=1e293b"/></a>
+<a href="#"><img src="https://img.shields.io/badge/HTML5-Frontend-E34F26?style=flat-square&logo=html5&logoColor=white&labelColor=1e293b"/></a>
+<a href="#"><img src="https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?style=flat-square&logo=javascript&logoColor=black&labelColor=1e293b"/></a>
+
+<br/><br/>
+
+<!-- Navigation Pills -->
+[`🌆 Overview`](#-overview)&nbsp;&nbsp;
+[`✨ Features`](#-features)&nbsp;&nbsp;
+[`🏗️ Architecture`](#️-architecture)&nbsp;&nbsp;
+[`🚀 Quick Start`](#-quick-start)&nbsp;&nbsp;
+[`📁 Structure`](#-project-structure)&nbsp;&nbsp;
+[`🛣️ Roadmap`](#️-roadmap)&nbsp;&nbsp;
+[`🤝 Contributing`](#-contributing)
+
 <br/>
 
 </div>
+
+---
+
+<!-- ── DEMO STRIP ───────────────────────────────────────────────── -->
+
+<div align="center">
+
+### 💡 The Problem We're Solving
+
+</div>
+
+```
+┌─────────────────────────────────┐      ┌──────────────────────────────────────┐
+│         WITHOUT CivicAlert      │      │           WITH CivicAlert            │
+├─────────────────────────────────┤      ├──────────────────────────────────────┤
+│  📞  Call helpdesk → hold music │ ───► │  📱  30-second mobile report         │
+│  📋  Fill confusing paper forms │ ───► │  🤖  Claude AI classifies instantly  │
+│  🤷  No idea who handles it     │ ───► │  📡  Auto-routed to right department │
+│  📭  Never hear back            │ ───► │  📬  SMS + Email at every step       │
+│  ❌  100 duplicate reports       │ ───► │  🔗  AI groups nearby duplicates     │
+│  📊  Zero accountability        │ ───► │  🌐  Public transparency portal      │
+│  😤  Citizens frustrated        │ ───► │  🏆  Gamified civic participation    │
+└─────────────────────────────────┘      └──────────────────────────────────────┘
+```
+
+<br/>
 
 ---
 
@@ -64,22 +82,37 @@
 
 ## 🌆 Overview
 
-**CivicAlert** is a production-grade, full-stack smart city platform that transforms how citizens interact with local government. It eliminates the friction of civic reporting by replacing phone calls, paper forms, and confusion with an intelligent, AI-assisted digital workflow.
+<table>
+<tr>
+<td width="65%">
 
-At its core, CivicAlert uses **Claude (Anthropic)** to automatically understand, classify, prioritize, and route civic complaints — from a broken streetlight to a collapsed drainage pipe — to the exact department that can fix it, with deadlines enforced, performance tracked, and citizens kept in the loop.
+**CivicAlert** is a production-grade, AI-assisted civic complaint management platform built for modern municipalities. It replaces fragmented, opaque government helplines with a unified, transparent, and intelligent digital system.
 
-<br/>
+Citizens report issues — road damage, water leaks, garbage, power outages — and **Claude AI (Anthropic)** instantly triages them: categorizing, prioritizing, routing to the right department, and tracking resolution — all with full SLA enforcement and automated notifications.
+
+> **Built to make local governance faster, smarter, and more human.**
+
+</td>
+<td width="35%" align="center">
 
 ```
-  BEFORE CivicAlert                     AFTER CivicAlert
-  ─────────────────                     ────────────────
-  📞 Call helpline → hold music         📱 Report in 30 seconds
-  📋 Fill paper form                    🤖 AI classifies instantly
-  🤷 No idea who handles it             📍 Auto-routed to department
-  📭 Never hear back                    📬 SMS/Email updates
-  ❌ Duplicate reports pile up          🔗 Auto-grouped by location
-  📊 Zero transparency                  🌐 Public transparency portal
+🏙️  Smart City
+     Platform
+
+📱  Citizens Report
+       ↓
+🤖  AI Classifies
+       ↓
+📡  Auto Routes
+       ↓
+👮  Officers Fix
+       ↓
+✅  Resolved!
 ```
+
+</td>
+</tr>
+</table>
 
 <br/>
 
@@ -91,32 +124,62 @@ At its core, CivicAlert uses **Claude (Anthropic)** to automatically understand,
 
 <br/>
 
-### 👤 &nbsp; Citizen Experience
+<div align="center">
+
+### 👤 Citizen Portal
+
+</div>
 
 <table>
 <tr>
-<td width="50%">
+<td align="center" width="33%">
 
-**🔐 Secure Authentication**
-Role-based user registration and session management with secure login flows.
+### 🔐
+**Secure Auth**
 
-**📝 Rich Issue Reporting**
-Submit complaints with GPS location, photo evidence, and structured descriptions.
-
-**🤖 CivicBot — AI Assistant**
-Conversational guide powered by Claude that walks citizens through the entire reporting process with natural language.
+Role-based registration, login & session management with full access control
 
 </td>
-<td width="50%">
+<td align="center" width="33%">
 
-**🏆 Gamification & Rewards**
-Citizens earn points for valid, impactful reports — encouraging sustained civic engagement.
+### 📝
+**Rich Reporting**
 
-**📱 Progressive Web App**
-Install CivicAlert directly from the browser. Works offline. No app store required.
+Submit complaints with GPS coordinates, photo evidence & structured descriptions
 
-**🔔 Real-time Notifications**
-Automated email and SMS updates at every stage of complaint resolution.
+</td>
+<td align="center" width="33%">
+
+### 🤖
+**CivicBot AI**
+
+Claude-powered assistant that guides citizens through reporting in plain language
+
+</td>
+</tr>
+<tr>
+<td align="center" width="33%">
+
+### 🏆
+**Gamification**
+
+Earn reward points for valid, verified civic reports — leaderboard included
+
+</td>
+<td align="center" width="33%">
+
+### 📱
+**PWA Support**
+
+Install on any device. Works offline. No app store required.
+
+</td>
+<td align="center" width="33%">
+
+### 🔔
+**Live Notifications**
+
+Automated email & SMS updates at each stage of issue resolution
 
 </td>
 </tr>
@@ -124,30 +187,42 @@ Automated email and SMS updates at every stage of complaint resolution.
 
 <br/>
 
-### 🤖 &nbsp; AI Triage Engine
+<div align="center">
 
-> Powered by **Claude Sonnet (Anthropic)** — every complaint is analyzed in milliseconds.
+### 🤖 AI Triage Engine
 
-| Capability | What it does |
-|:---|:---|
-| 🧠 **Smart Classification** | Detects issue category — Road, Water, Garbage, Electricity, and more |
-| ⚡ **Priority Assignment** | Assigns Urgent / Medium / Low based on severity, keywords, and context |
-| 🗺️ **Auto-Routing** | Instantly forwards complaints to the correct civic department |
-| 🔗 **Duplicate Grouping** | Clusters nearby, similar reports to prevent redundant workload |
-| 🛠️ **Solution Suggestion** | Proposes actionable resolution steps for officers |
+> *Powered by **Claude Sonnet** — every complaint understood in milliseconds*
+
+</div>
 
 <br/>
 
-### 🏛️ &nbsp; Admin & Authority Tools
+| &nbsp;&nbsp;&nbsp;Module&nbsp;&nbsp;&nbsp; | Capability | Detail |
+|:---:|:---|:---|
+| 🧠 | **Smart Classification** | Auto-detects issue type — Road / Water / Garbage / Electricity / Other |
+| ⚡ | **Priority Scoring** | Assigns Urgent / Medium / Low using NLP severity analysis |
+| 📡 | **Intelligent Routing** | Forwards to the correct civic department with zero human triage |
+| 🔗 | **Duplicate Clustering** | Groups similar reports within geographic proximity to reduce redundancy |
+| 🛠️ | **Solution Generation** | Proposes concrete resolution steps for field officers |
 
-| Tool | Description |
-|:---|:---|
-| ⏱️ **SLA Enforcement** | Urgent: 24h · Medium: 72h · Low: 168h — automatic breach detection |
-| 📊 **Analytics Dashboard** | Complaint volume, resolution rates, department performance |
-| 🗺️ **Geospatial Heatmap** | Live Leaflet.js map showing complaint density by ward/area |
-| 🏅 **Officer Leaderboard** | Ranks officers by speed and resolution quality |
-| 🌐 **Transparency Portal** | Public-facing ward-level performance dashboard |
-| 📬 **Automated Alerts** | Status push notifications to citizens at each stage |
+<br/>
+
+<div align="center">
+
+### 🏛️ Admin & Authority Dashboard
+
+</div>
+
+<br/>
+
+| Feature | SLA / Metric | Description |
+|:---|:---:|:---|
+| ⏱️ **SLA Enforcement** | Urgent `24h` · Medium `72h` · Low `168h` | Auto-flags breached deadlines |
+| 📊 **Analytics Dashboard** | Real-time | Complaints by priority, status & department |
+| 🗺️ **Geospatial Heatmap** | Live | Leaflet.js map showing issue density per ward |
+| 🏅 **Officer Leaderboard** | Daily | Ranks officers by resolution speed & quality |
+| 🌐 **Transparency Portal** | Public | Ward-level civic performance — accessible to all |
+| 📬 **Notification Engine** | Instant | Push, Email & SMS status updates to citizens |
 
 <br/>
 
@@ -160,71 +235,104 @@ Automated email and SMS updates at every stage of complaint resolution.
 <br/>
 
 ```
-╔══════════════════════════════════════════════════════════════════╗
-║                         CIVICALERT LPRS                         ║
-╠══════════════════════════════════════════════════════════════════╣
-║                                                                  ║
-║   ┌─────────────────────────────────────────────────────────┐   ║
-║   │                    FRONTEND LAYER                       │   ║
-║   │                                                         │   ║
-║   │   HTML5 · CSS3 (Glassmorphism) · Vanilla JavaScript     │   ║
-║   │   Leaflet.js  ·  Service Workers  ·  PWA Manifest       │   ║
-║   └──────────────────────┬──────────────────────────────────┘   ║
-║                          │  HTTP / REST API                      ║
-║   ┌──────────────────────▼──────────────────────────────────┐   ║
-║   │                    BACKEND LAYER                        │   ║
-║   │                                                         │   ║
-║   │   Python 3.8+  ·  Flask  ·  Flask-CORS                  │   ║
-║   │   JSON Datastores (complaints · users · officers)        │   ║
-║   │   SMTP Email  ·  SMS Notifications                      │   ║
-║   └──────────────────────┬──────────────────────────────────┘   ║
-║                          │  Anthropic SDK                        ║
-║   ┌──────────────────────▼──────────────────────────────────┐   ║
-║   │                    AI LAYER                             │   ║
-║   │                                                         │   ║
-║   │   Claude Sonnet  ·  NLP Classification                  │   ║
-║   │   CivicBot Chatbot  ·  Smart Grouping Engine            │   ║
-║   └─────────────────────────────────────────────────────────┘   ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
+ ╔══════════════════════════════════════════════════════════════════════════╗
+ ║                                                                          ║
+ ║   ██████╗██╗██╗   ██╗██╗ ██████╗ █████╗ ██╗     ███████╗██████╗ ████████╗   ║
+ ║  ██╔════╝██║██║   ██║██║██╔════╝██╔══██╗██║     ██╔════╝██╔══██╗╚══██╔══╝   ║
+ ║  ██║     ██║╚██╗ ██╔╝██║██║     ███████║██║     █████╗  ██████╔╝   ██║      ║
+ ║  ██║     ██║ ╚████╔╝ ██║██║     ██╔══██║██║     ██╔══╝  ██╔══██╗   ██║      ║
+ ║  ╚██████╗██║  ╚██╔╝  ██║╚██████╗██║  ██║███████╗███████╗██║  ██║   ██║      ║
+ ║   ╚═════╝╚═╝   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝   ╚═╝      ║
+ ║                                                                          ║
+ ╚══════════════════════════════════════════════════════════════════════════╝
+
+ ┌──────────────────────── SYSTEM ARCHITECTURE ─────────────────────────────┐
+ │                                                                           │
+ │   ╭───────────────────────────────────────────────────────────────────╮  │
+ │   │                    🌐  FRONTEND  LAYER                           │  │
+ │   │                                                                   │  │
+ │   │    ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐   │  │
+ │   │    │ index    │   │ login    │   │  app     │   │ manifest │   │  │
+ │   │    │ .html    │   │ .html    │   │  .html   │   │  .json   │   │  │
+ │   │    └──────────┘   └──────────┘   └──────────┘   └──────────┘   │  │
+ │   │                                                                   │  │
+ │   │    HTML5 · CSS3 Glassmorphism · Vanilla JS · Leaflet.js          │  │
+ │   │    Service Worker (sw.js) · PWA Offline Cache                    │  │
+ │   ╰─────────────────────────────┬─────────────────────────────────── ╯  │
+ │                                 │  REST API  (HTTP/JSON)                 │
+ │   ╭─────────────────────────────▼─────────────────────────────────── ╮  │
+ │   │                    ⚙️  BACKEND  LAYER                            │  │
+ │   │                                                                   │  │
+ │   │    ┌─────────────────────────────────────────────────────────┐   │  │
+ │   │    │  🐍  app.py  (Flask)  ·  Routing  ·  Auth  ·  SLA      │   │  │
+ │   │    └──────────┬───────────────────────────────┬──────────────┘   │  │
+ │   │               │                               │                   │  │
+ │   │    ┌──────────▼──────────┐       ┌────────────▼────────────┐     │  │
+ │   │    │  📊  JSON Stores    │       │  📬  Notification Svc   │     │  │
+ │   │    │  complaints.json    │       │  SMTP Email · SMS       │     │  │
+ │   │    │  users.json         │       └─────────────────────────┘     │  │
+ │   │    │  officers.json      │                                        │  │
+ │   │    └─────────────────────┘                                        │  │
+ │   ╰─────────────────────────────┬─────────────────────────────────── ╯  │
+ │                                 │  Anthropic SDK                         │
+ │   ╭─────────────────────────────▼─────────────────────────────────── ╮  │
+ │   │                    🤖  AI  LAYER  (Claude)                       │  │
+ │   │                                                                   │  │
+ │   │    ┌──────────────────┐   ┌──────────────────┐   ┌────────────┐  │  │
+ │   │    │  NLP Classifier  │   │  CivicBot Chat   │   │  Grouping  │  │  │
+ │   │    │  Category+Prio   │   │  Assistant       │   │  Engine    │  │  │
+ │   │    └──────────────────┘   └──────────────────┘   └────────────┘  │  │
+ │   ╰───────────────────────────────────────────────────────────────── ╯  │
+ │                                                                           │
+ └───────────────────────────────────────────────────────────────────────────┘
 ```
 
 <br/>
 
-### 🔄 &nbsp; Complaint Lifecycle
+### 🔄 Complaint Lifecycle — End to End
+
+<br/>
 
 ```
-  CITIZEN                  CIVICALERT                 AUTHORITY
-  ───────                  ──────────                 ─────────
+                    ┌─────────────────────────────────────────────────────┐
+                    │              COMPLAINT LIFECYCLE                     │
+                    └─────────────────────────────────────────────────────┘
 
-  📱 Opens App
-       │
-       ▼
-  📝 Reports Issue ──► 🤖 Claude AI Triage
-                              │
-                    ┌─────────┴──────────┐
-                    │                    │
-                    ▼                    ▼
-             📂 Categorize        ⚡ Prioritize
-             (Road/Water/etc)     (Urgent/Med/Low)
-                    │                    │
-                    └─────────┬──────────┘
-                              │
-                              ▼
-                    🔗 Duplicate Check ──► Merge if nearby
-                              │
-                              ▼
-                    📡 Route to Department ──────────► 👮 Officer Assigned
-                              │                               │
-                              ▼                               ▼
-                    ⏱️ SLA Timer Starts              🔧 Work Begins
-                              │                               │
-                              ◄───────── Status Updates ──────┘
-                              │
-                    📬 Notify Citizen
-                              │
-                              ▼
-                    ✅ Resolved + 🏆 Points Awarded
+  👤 CITIZEN                   🤖 CIVICALERT AI               👮 AUTHORITY
+  ──────────                   ──────────────────             ───────────
+
+  ① Opens PWA App
+        │
+        ▼
+  ② Talks to CivicBot ──────► Guided Report Flow
+        │                             │
+        ▼                             ▼
+  ③ Submits Issue ──────────► Claude AI Triage
+                                      │
+                            ┌─────────┴──────────┐
+                            ▼                    ▼
+                      📂 Categorize       ⚡ Prioritize
+                      Road / Water /      URGENT  (24h)
+                      Garbage / Power     MEDIUM  (72h)
+                                          LOW    (168h)
+                            │                    │
+                            └────────┬───────────┘
+                                     │
+                                     ▼
+                            🔗 Duplicate Check
+                            ├─ New? → Create ticket
+                            └─ Similar nearby? → Merge & group
+                                     │
+                                     ▼
+                            📡 Route to Department ──────────► ④ Officer Assigned
+                                     │                                  │
+                                     ▼                                  ▼
+                            ⏱️ SLA Clock Starts              🔧 Field Work Begins
+                                     │                                  │
+  ⑤ Receive Updates ◄─── 📬 Notify Citizen ◄────── Status Push ────────┘
+        │
+        ▼
+  ⑥ Issue Resolved ✅ + 🏆 Reward Points Credited
 ```
 
 <br/>
@@ -233,26 +341,15 @@ Automated email and SMS updates at every stage of complaint resolution.
 
 <br/>
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 <br/>
 
-### Prerequisites
-
-Ensure the following are installed on your system:
-
-| Requirement | Version | Purpose |
-|:---|:---|:---|
-| **Python** | `3.8+` | Primary backend runtime |
-| **pip** | Latest | Python package manager |
-| **Node.js** | `14+` *(optional)* | Only for the Express server alternative |
-| **Git** | Any | Version control |
+> **Get CivicAlert running in under 5 minutes.**
 
 <br/>
 
-### ⚡ Quick Setup
-
-**Step 1 — Clone the repository**
+### Step 1 — Clone
 
 ```bash
 git clone https://github.com/Bhogi123-T/Local-Problem-Solving-System.git
@@ -261,77 +358,90 @@ cd Local-Problem-Solving-System
 
 <br/>
 
-**Step 2 — Configure environment variables**
+### Step 2 — Environment Setup
 
 Create a `.env` file in the project root:
 
 ```env
-# ─── Anthropic AI ────────────────────────────────────────────────
-ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxxxxxxxxxxxxxxx
+# ┌─────────────────────────────────────────────────────────────┐
+# │                    CIVICALERT CONFIG                        │
+# └─────────────────────────────────────────────────────────────┘
 
-# ─── Flask Security ──────────────────────────────────────────────
-SECRET_KEY=your-strong-random-secret-key-here
+# ── AI (Required) ─────────────────────────────────────────────
+ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-# ─── Email Notifications (SMTP) ──────────────────────────────────
+# ── Flask (Required) ──────────────────────────────────────────
+SECRET_KEY=your-super-secure-random-key-here
+
+# ── Email Notifications (Optional) ───────────────────────────
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your_email@gmail.com
-SMTP_PASS=your_app_password
+SMTP_PASS=your_app_specific_password
 ```
 
-> 💡 **Get your Anthropic API key** → [console.anthropic.com](https://console.anthropic.com)
->
-> 💡 **Generate a Flask secret key** → `python -c "import secrets; print(secrets.token_hex(32))"`
+<details>
+<summary>💡 <b>How to get your API keys</b></summary>
 
 <br/>
 
-**Step 3 — Install dependencies**
+| Key | Where to Get It |
+|:---|:---|
+| `ANTHROPIC_API_KEY` | [console.anthropic.com](https://console.anthropic.com) → API Keys |
+| `SECRET_KEY` | Run: `python -c "import secrets; print(secrets.token_hex(32))"` |
+| `SMTP_PASS` | Gmail → Manage Account → Security → App Passwords |
+
+</details>
+
+<br/>
+
+### Step 3 — Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
 <details>
-<summary><b>📦 Key dependencies</b></summary>
+<summary>📦 <b>What gets installed</b></summary>
 <br/>
 
-| Package | Purpose |
-|:---|:---|
-| `flask` | Web framework & routing |
-| `flask-cors` | Cross-Origin Resource Sharing |
-| `anthropic` | Claude AI SDK |
-| `python-dotenv` | Environment variable loading |
+| Package | Version | Purpose |
+|:---|:---:|:---|
+| `flask` | `2.x` | Web framework & API routing |
+| `flask-cors` | Latest | Cross-Origin Resource Sharing |
+| `anthropic` | Latest | Claude AI SDK |
+| `python-dotenv` | Latest | `.env` file loader |
 
 </details>
 
 <br/>
 
-**Step 4 — Launch the server**
+### Step 4 — Launch
 
 ```bash
 python app.py
 ```
 
 ```
- * Running on http://localhost:5000
- * Debug mode: on
- ✓ CivicAlert is live!
+ ┌──────────────────────────────────────────┐
+ │                                          │
+ │   🏙️  CivicAlert LPRS — Starting...     │
+ │                                          │
+ │   ✅  Flask server initialized           │
+ │   ✅  Claude AI connected                │
+ │   ✅  Datastores loaded                  │
+ │   ✅  PWA assets ready                   │
+ │                                          │
+ │   🚀  Running on http://localhost:5000   │
+ │                                          │
+ └──────────────────────────────────────────┘
 ```
 
 <br/>
 
-**Step 5 — Open in browser**
-
-```
-http://localhost:5000
-```
-
-<br/>
-
-> **Alternative: Node.js / Express server**
+> **Alternative (Node.js / Express)**
 > ```bash
-> npm install
-> node server.js
+> npm install && node server.js
 > ```
 
 <br/>
@@ -343,30 +453,30 @@ http://localhost:5000
 ## 📁 Project Structure
 
 ```
-Local-Problem-Solving-System/
+📦 Local-Problem-Solving-System/
 │
-├── 🐍  app.py                    # Flask backend — API routes, AI integration
-├── 🟨  server.js                 # Alternative Express.js server
-├── 📋  requirements.txt          # Python dependencies
-├── 📦  package.json              # Node.js configuration
-├── 🔒  .env                      # Environment variables (never commit!)
-├── 🔒  .gitignore
+├── 🐍  app.py                ← Flask server: routes, AI calls, SLA logic
+├── 🟨  server.js             ← Alternative Express.js server
+├── 📋  requirements.txt      ← Python dependencies
+├── 📦  package.json          ← Node.js config
+├── 🔒  .env                  ← Secrets (NEVER commit this!)
+├── 📄  .gitignore
 │
-├── 📊  complaints.json           # Complaint datastore
-├── 👥  users.json                # User accounts datastore
-├── 👮  officers.json             # Officer profiles datastore
+├── 📊  complaints.json       ← All civic complaints datastore
+├── 👥  users.json            ← Registered citizens datastore
+├── 👮  officers.json         ← Assigned officers datastore
 │
-└── 🌐  public/                   # Frontend (served statically)
+└── 🌐  public/               ← Frontend (static assets)
     │
-    ├── 🏠  index.html            # Landing page
-    ├── 🔐  login.html            # Auth page (login / register)
-    ├── 📋  app.html              # Main citizen dashboard
+    ├── 🏠  index.html        ← Landing / marketing page
+    ├── 🔐  login.html        ← Login + Registration page
+    ├── 📋  app.html          ← Main citizen dashboard
     │
-    ├── 🎨  style.css             # Global styles — Glassmorphism UI
-    ├── ⚙️   script.js            # Frontend logic, map integration
+    ├── 🎨  style.css         ← Glassmorphism UI styles
+    ├── ⚙️   script.js         ← App logic, map, API calls
     │
-    ├── 🔧  sw.js                 # Service Worker (PWA offline support)
-    └── 📱  manifest.json         # PWA manifest configuration
+    ├── 🔧  sw.js             ← Service Worker (offline PWA)
+    └── 📱  manifest.json     ← PWA manifest (icons, name, theme)
 ```
 
 <br/>
@@ -375,17 +485,54 @@ Local-Problem-Solving-System/
 
 <br/>
 
-## 📱 Progressive Web App
+## 📱 PWA — Install Anywhere
 
-CivicAlert is fully PWA-compliant — no app store, no downloads. Install it straight from the browser:
+<br/>
 
-| Platform | How to Install |
-|:---|:---|
-| **Android (Chrome)** | Tap the **⋮** menu → *Add to Home Screen* |
-| **iOS (Safari)** | Tap the **Share** icon → *Add to Home Screen* |
-| **Desktop (Chrome/Edge)** | Click the **install icon** (⊕) in the address bar |
+CivicAlert is a **fully compliant Progressive Web App** — no app store, no installation fees. Works on every device, even offline.
 
-Once installed, CivicAlert caches critical assets and works even in low-connectivity environments.
+<br/>
+
+<table>
+<tr>
+<th align="center">📱 Android</th>
+<th align="center">🍎 iOS / iPhone</th>
+<th align="center">💻 Desktop</th>
+</tr>
+<tr>
+<td align="center">
+
+Open in **Chrome**
+↓
+Tap **⋮** menu
+↓
+*Add to Home Screen*
+
+</td>
+<td align="center">
+
+Open in **Safari**
+↓
+Tap **⬆️ Share**
+↓
+*Add to Home Screen*
+
+</td>
+<td align="center">
+
+Open in **Chrome / Edge**
+↓
+Click **⊕** in address bar
+↓
+*Install App*
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+> Once installed, CivicAlert caches all critical assets via the Service Worker (`sw.js`), enabling full offline usage and near-instant load times.
 
 <br/>
 
@@ -395,16 +542,33 @@ Once installed, CivicAlert caches critical assets and works even in low-connecti
 
 ## 🛣️ Roadmap
 
-- [x] AI-powered issue classification (Claude Sonnet)
-- [x] SLA tracking with automated breach detection
-- [x] Geospatial map view with Leaflet.js
-- [x] Gamification & citizen reward system
-- [x] PWA with offline capability
-- [ ] Real database integration (PostgreSQL / MongoDB)
-- [ ] Push notifications (Web Push API)
-- [ ] Multi-language / i18n support
-- [ ] Admin mobile app
-- [ ] ML-based trend prediction for proactive civic planning
+<br/>
+
+```
+ PHASE 1 — FOUNDATION                    ██████████  COMPLETE ✅
+ ───────────────────────────────────────────────────────────────
+  ✅  AI-powered complaint classification (Claude Sonnet)
+  ✅  SLA tracking with automatic breach detection
+  ✅  Geospatial heatmap (Leaflet.js)
+  ✅  Citizen gamification & reward system
+  ✅  PWA with offline capability
+  ✅  Officer leaderboard & performance analytics
+
+ PHASE 2 — SCALE                         ████░░░░░░  IN PROGRESS 🔄
+ ───────────────────────────────────────────────────────────────
+  🔄  PostgreSQL / MongoDB database migration
+  🔄  Web Push API notifications
+  🔄  Multi-language support (i18n)
+  🔄  Advanced analytics & trend charts
+
+ PHASE 3 — FUTURE                        ░░░░░░░░░░  PLANNED 📋
+ ───────────────────────────────────────────────────────────────
+  📋  Native mobile apps (React Native)
+  📋  ML-based civic trend prediction
+  📋  Integration with municipal ERP systems
+  📋  Voice complaint reporting (Whisper API)
+  📋  Satellite / drone damage verification
+```
 
 <br/>
 
@@ -414,35 +578,43 @@ Once installed, CivicAlert caches critical assets and works even in low-connecti
 
 ## 🤝 Contributing
 
-Contributions, bug reports, and feature requests are warmly welcome!
+<br/>
+
+Contributions are what make open source remarkable. All forms of contribution are welcome — code, docs, bug reports, ideas.
 
 <br/>
 
-**1. Fork & clone**
 ```bash
+# 1. Fork the repo on GitHub, then clone your fork
 git clone https://github.com/YOUR_USERNAME/Local-Problem-Solving-System.git
-```
+cd Local-Problem-Solving-System
 
-**2. Create a feature branch**
-```bash
-git checkout -b feat/your-feature-name
-```
+# 2. Create a descriptive feature branch
+git checkout -b feat/ward-level-heatmap-filters
 
-**3. Commit with conventional commits**
-```bash
-git commit -m "feat: add ward-level filtering to transparency portal"
-git commit -m "fix: SLA timer not resetting on reassignment"
-git commit -m "docs: update setup instructions for Windows"
-```
+# 3. Make your changes, then commit with Conventional Commits
+git commit -m "feat: add ward-level filtering to geospatial heatmap"
+git commit -m "fix: SLA timer not resetting on officer reassignment"
+git commit -m "docs: add Windows-specific setup instructions"
+git commit -m "test: add unit tests for AI triage classifier"
 
-**4. Push and open a Pull Request**
-```bash
-git push origin feat/your-feature-name
+# 4. Push and open a Pull Request
+git push origin feat/ward-level-heatmap-filters
 ```
 
 <br/>
 
-> Please make sure your code is clean, commented, and tested before submitting. For major changes, open an issue first to discuss the approach.
+<details>
+<summary>📐 <b>Contribution Guidelines</b></summary>
+<br/>
+
+- Keep code clean and well-commented
+- Follow existing naming conventions
+- For major features — open an issue first to discuss
+- Ensure nothing breaks in the existing flow
+- Update relevant docs if needed
+
+</details>
 
 <br/>
 
@@ -450,15 +622,21 @@ git push origin feat/your-feature-name
 
 <br/>
 
-## 🐛 Found a Bug?
+## 🐛 Bug Reports & Issues
 
-Open an issue with the following details:
-- **Environment** (OS, Python version, browser)
-- **Steps to reproduce**
-- **Expected vs actual behavior**
-- **Screenshots** (if applicable)
+<br/>
 
-👉 [Open an Issue](https://github.com/Bhogi123-T/Local-Problem-Solving-System/issues/new)
+Found something broken? Please include:
+
+```
+Environment  →  OS / Python version / Browser
+Steps        →  How to reproduce (numbered)
+Expected     →  What should happen
+Actual       →  What actually happens
+Screenshot   →  If applicable
+```
+
+👉 **[Open an Issue](https://github.com/Bhogi123-T/Local-Problem-Solving-System/issues/new/choose)**
 
 <br/>
 
@@ -468,23 +646,19 @@ Open an issue with the following details:
 
 ## 📜 License
 
-```
-MIT License
+<br/>
 
-Copyright (c) 2024 Bhogi123-T
+```
+MIT License — Copyright (c) 2024 Bhogi123-T
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+of this software to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies — subject to the above copyright notice appearing in all copies.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 ```
+
+Full text → [`LICENSE`](./LICENSE)
 
 <br/>
 
@@ -494,13 +668,28 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 
 ## 🙌 Acknowledgements
 
-| | |
-|:---|:---|
-| [**Anthropic**](https://www.anthropic.com/) | Claude AI — powering CivicBot and the smart triage engine |
-| [**Leaflet.js**](https://leafletjs.com/) | Beautiful, lightweight interactive maps |
-| [**Flask**](https://flask.palletsprojects.com/) | Minimal and elegant Python web framework |
-| [**Shields.io**](https://shields.io/) | Beautiful badge generation |
-| [**Capsule Render**](https://github.com/kyechan99/capsule-render) | Stunning header/footer banners |
+<br/>
+
+<table>
+<tr>
+<td align="center" width="25%">
+<a href="https://www.anthropic.com"><img src="https://img.shields.io/badge/Anthropic-Claude_AI-D97757?style=for-the-badge&logo=anthropic&logoColor=white&labelColor=0D1B2A"/></a>
+<br/><sub>Powers CivicBot & AI triage</sub>
+</td>
+<td align="center" width="25%">
+<a href="https://leafletjs.com"><img src="https://img.shields.io/badge/Leaflet.js-Maps-199900?style=for-the-badge&logo=leaflet&logoColor=white&labelColor=0D1B2A"/></a>
+<br/><sub>Interactive geospatial maps</sub>
+</td>
+<td align="center" width="25%">
+<a href="https://flask.palletsprojects.com"><img src="https://img.shields.io/badge/Flask-Backend-000000?style=for-the-badge&logo=flask&logoColor=white&labelColor=0D1B2A"/></a>
+<br/><sub>Python web framework</sub>
+</td>
+<td align="center" width="25%">
+<a href="https://shields.io"><img src="https://img.shields.io/badge/Shields.io-Badges-green?style=for-the-badge&logo=shieldsdotio&logoColor=white&labelColor=0D1B2A"/></a>
+<br/><sub>Beautiful badge generation</sub>
+</td>
+</tr>
+</table>
 
 <br/>
 
@@ -508,27 +697,32 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 
 <br/>
 
+<!-- ── FOOTER ──────────────────────────────────────────────────── -->
+
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=120&section=footer" alt="Footer Wave"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D9488,50:065F46,100:0D1B2A&height=140&section=footer&text=Making%20Cities%20Smarter&fontSize=24&fontColor=ffffff&fontAlignY=65&desc=One%20Complaint%20at%20a%20Time&descSize=14&descColor=5EEAD4&descAlignY=85&animation=twinkling" width="100%"/>
 
 <br/>
 
-**Built with ❤️ to make cities smarter and governance more human.**
-
-<br/>
-
-<a href="https://github.com/Bhogi123-T/Local-Problem-Solving-System">
-  <img src="https://img.shields.io/github/stars/Bhogi123-T/Local-Problem-Solving-System?style=social" alt="GitHub Stars"/>
+<a href="https://github.com/Bhogi123-T/Local-Problem-Solving-System/stargazers">
+  <img src="https://img.shields.io/github/stars/Bhogi123-T/Local-Problem-Solving-System?style=social" alt="Stars"/>
 </a>
-&nbsp;&nbsp;
-<a href="https://github.com/Bhogi123-T/Local-Problem-Solving-System/fork">
-  <img src="https://img.shields.io/github/forks/Bhogi123-T/Local-Problem-Solving-System?style=social" alt="GitHub Forks"/>
+&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/Bhogi123-T/Local-Problem-Solving-System/network/members">
+  <img src="https://img.shields.io/github/forks/Bhogi123-T/Local-Problem-Solving-System?style=social" alt="Forks"/>
+</a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/Bhogi123-T/Local-Problem-Solving-System/watchers">
+  <img src="https://img.shields.io/github/watchers/Bhogi123-T/Local-Problem-Solving-System?style=social" alt="Watchers"/>
 </a>
 
-<br/>
+<br/><br/>
+
+**Built with ❤️ for better governance and smarter cities**
+
 <br/>
 
-*⭐ Star this repository if CivicAlert inspired you!*
+> *⭐ If CivicAlert inspired you, a star would mean the world — it helps others discover this project!*
 
 </div>
